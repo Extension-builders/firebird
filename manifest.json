@@ -1,0 +1,37 @@
+{
+  "name": "Firebird",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "./icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon_active.png",
+    "default_title": "Sample",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Set this page's color.",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "description": "This extension helps you to hide what you are doing.",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery-1.12.4.min.js", "index.js"],
+      "css": ["index.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": ["concealer.png"]
+}

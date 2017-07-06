@@ -1,0 +1,21 @@
+.semi-concealed{
+  filter: saturate(0);
+  filter: contrast(0);
+}
+
+.concealed{
+  display: none !important;
+}
+
+#img-conceal{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transition: 0.2s ease-out;
+  height: 100%;
+  width: 100%;
+  background-image: url();
+  background-size: cover;
+  pointer-events: none;
+  z-index: 100000000000000;
+}
